@@ -5,6 +5,18 @@ package sdp.prac2;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import java.util.*;
 
 class AppTest {
+    //write a test for Task6 method
+    @Test void task6RoundsUpElementsToNearestHundred() {
+        // Arrange
+        App classBeingTested = new App();
+        List<Integer> data = Arrays.asList(0,1,101,99,200,151,999);
+        List<Integer> expected = Arrays.asList(100,100,100,100,200,200,1000);
+        // Act
+        List<Integer> result = classBeingTested.Task6(data);
+        // Assert
+        assertEquals(expected, result);
+        }
 }
