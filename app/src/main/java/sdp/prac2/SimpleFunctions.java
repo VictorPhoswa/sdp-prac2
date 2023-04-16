@@ -23,5 +23,14 @@ public class SimpleFunctions {
 			return false;
 		}
     }//Task5 method for sorting a list of integers
+	public static List<String> task2 (List<String> lst){
+		List<String> out = new ArrayList<String>(); //Create an empty list of type string named out
+		for (String i : lst){ //Loop through the list given
+			if (i.length() > 1){ //If the list is greater than length of 1
+				out.add(i.substring(1)); //Append the list out with that value missing its first entry
+			} //Otherwise dont add it hence satisfying second condition
+		}
+		return out; //Return list of strings missing its first character
+	}//Task2 method for removing the first character in a list.
     public SimpleFunctions() {}
 }
