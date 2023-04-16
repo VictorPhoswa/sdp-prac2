@@ -3,6 +3,19 @@ package sdp.prac2;
 import java.util.*;
 
 public class SimpleFunctions {
+
+	public static int Task1(List<Integer> a, List<Integer> b) {
+		int total = 0;  // Initialize total to 0
+		for (int i = 0; i < b.size(); i++) {  // Loop through each index i in b
+			int index = b.get(i);  // Get the index at position i from b
+			if (index < a.size()) {  // Check if index is within range of a
+				total += a.get(index);  // Add the element at index in a to total
+			}
+		}
+		return total;  // Return the final total
+	}//TASK 1
+	
+
     public static boolean Task5 (List<Integer>lst){ //assuming the list is of integers
 		boolean descendingOrder = true; //boolean flag
 		for (int i=0; i<lst.size()-1; i++){ //check descending order
