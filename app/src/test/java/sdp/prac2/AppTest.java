@@ -10,22 +10,25 @@ import java.util.*;
 class AppTest {
 
     //TASK 2 tests
-    @Test
-    public void testTask2() {
+    @Test void testTask2() {
+
+        SimpleFunctions Tests = new SimpleFunctions();
+
         List<String> input = Arrays.asList("hello", "world", "a", "", "testing", "123", "ab");
         List<String> expected = Arrays.asList("ello", "orld", "", "esting", "23", "b");
 
-        List<String> result = Task2(input);
+        List<String> result = Tests.task2(input);
 
         assertEquals(expected, result);
     }//TASK 2 tests
 
-    @Test
-    public void testTask2EmptyList() {
+    @Test void testTask2EmptyList() {
+        SimpleFunctions Tests = new SimpleFunctions();
+
         List<String> input = Collections.emptyList();
         List<String> expected = Collections.emptyList();
 
-        List<String> result = Task2(input);
+        List<String> result = Tests.task2(input);
 
         assertEquals(expected, result);
     }//TASK 2 tests
