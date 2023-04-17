@@ -42,4 +42,23 @@ class AppTest {
         // Assert
         assertEquals(expected, result);
         }
+
+
+    @Test void Task4tests(){
+        // for list with equal number of elements 
+        List<Integer> List1 = Arrays.asList(3,6,9); // arrange 
+        List<Integer> List2 = Arrays.asList(8,9,5);
+        List<Integer> output = Arrays.asList(15,54,72);
+        List<Integer> result = SimpleFunctions.TASK4(List1, List2); //assert 
+        Assertions.assertEquals(output, result);   //act
+
+        // for list with unequal number of elements
+         List<Integer> List1 = Arrays.asList(9, 8, 3);  // arrange
+         List<Integer> List2 = Arrays.asList(7, 5);
+         List<Integer> output = null;      
+         List<Integer> result = SimpleFunctions.TASK4(List1, List2);  //assert
+         Assertions.assertEquals(output, result);   // act
+
+
+    }
 }
