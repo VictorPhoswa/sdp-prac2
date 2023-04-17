@@ -46,4 +46,22 @@ public class SimpleFunctions {
 		return out; //Return list of strings missing its first character
 	}//Task2 method for removing the first character in a list.
     public SimpleFunctions() {}
+
+    
+	public static boolean TASK3 (String p){
+      int brackets = 0; //initialise brackets to 0
+	  for (int i= 0; i<p.length(); i++){ //loop through the string p
+		  if (p.charAt(i) == '('){ //if its an open  bracket
+			  brackets++; //increase the number of brackets
+		  }
+		  else if (p.charAt(i) == ')'){ //if its a closing bracket 
+			  brackets--; //decrement brackets
+		  }
+		  if (brackets < 0){ //if brackets is less than 0
+			  return false; //return false
+		  }
+	  }
+	  return brackets == 0; //return true if brackets is 0
+	}//TASK 3
+	
 }
