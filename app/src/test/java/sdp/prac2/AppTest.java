@@ -33,7 +33,14 @@ class AppTest {
         assertEquals(expected, result);
     }//TASK 2 tests
 
+    @Test void testTask3() {
+        SimpleFunctions Tests = new SimpleFunctions();
+        List<String> input = Arrays.asList("function()", "(fun)", "z)()", "", "(())", "12())", "tester(((()))");
+        List<boolean> expected = Arrays.asList(true, true, false, true, true, false,false);
 
+        List<String> result = Tests.TASK3(input);
+        assertEquals(expected,result);
+    }
     //write a test for Task6 method
     @Test void task6RoundsUpElementsToNearestHundred() {
         // Arrange
